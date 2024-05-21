@@ -17,7 +17,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = INSERT into opponent(school, city, state) VALUES('$_POST[school]','$_POST[city]','$_POST[state]');;
+$sql = "INSERT into opponent(school, city, state) VALUES('$_POST[school]','$_POST[city]','$_POST[state]')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";

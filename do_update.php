@@ -5,6 +5,8 @@ if (!isset($_SESSION['username'])) {
 }
 
 // TODO: validate the input form data
+include 'validate.php';
+
 
 $servername = "localhost";
 $username = "root";
