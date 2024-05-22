@@ -3,8 +3,6 @@ if (!isset($_SESSION['username'])) {
     header("location:index.php");
     exit(0);
 }
-
-// TODO: validate the input form data
 include 'validate.php';
 
 

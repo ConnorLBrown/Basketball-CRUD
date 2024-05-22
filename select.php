@@ -12,8 +12,6 @@ if (!isset($_SESSION['username'])) {
         <title></title>
     </head>
     <body>
-        <!-- TODO: sql select goes here (show everything except the id column -->
-        <!-- TODO: display teams in alphabetic order -->
         <?php
         $servername = "localhost";
         $username = "root";
@@ -29,7 +27,6 @@ if (!isset($_SESSION['username'])) {
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
-            // output data for each row
             while ($row = $result->fetch_assoc()) {
                 echo "School: " .
                 $row["school"] . "   \   City: " .
@@ -44,7 +41,6 @@ if (!isset($_SESSION['username'])) {
         $conn->close();
         ?>
 
-        <!-- link to main menu -->
         <a href="index.php">Main menu</a>
 
     </body>

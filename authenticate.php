@@ -2,7 +2,6 @@
 
 session_start();
 
-// TODO: include validation function here
 include 'validate.php';
 
 $servername = "localhost";
@@ -12,14 +11,11 @@ $dbname = "una_bball";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
-    // Connection failed, but don't divulge too much...
     $_SESSION['error'] = "500 Internal Server Error: contact system administrator";
 }
 
 
 $endUser = $endUserPassword = "";
-
-// TODO: input validation
 $endUser = $_POST['enduser'];
 $endUserPass = $_POST['endUserPass'];
 $hashedPassword = "";

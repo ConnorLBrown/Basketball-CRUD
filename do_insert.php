@@ -4,9 +4,6 @@ if (!isset($_SESSION['username'])) {
     exit(0);
 }
 
-
-// TODO: insert the new school based on data from the insert.php form
-
 $servername = "localhost";
 $username = "root";
 $password = "";
